@@ -28,7 +28,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 15)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 0)];
         _titleLabel = titleLabel;
         _titleLabel.font = [UIFont systemFontOfSize:10];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -49,15 +49,15 @@
         }
         [self addSubview:_valueLabel];
        
-        if ([NSLayoutConstraint class]) {
-            NSDictionary *views = NSDictionaryOfVariableBindings(titleLabel, valueLabel);
-            NSString *visualFormat = @"V:|-5-[titleLabel(==12)]-0-[valueLabel(==32)]";
-            NSArray *contraint = [NSLayoutConstraint constraintsWithVisualFormat:visualFormat
-                                                                         options:0
-                                                                         metrics:nil
-                                                                           views:views];
-            [self addConstraints:contraint];
-        }
+//        if ([NSLayoutConstraint class]) {
+//            NSDictionary *views = NSDictionaryOfVariableBindings(titleLabel, valueLabel);
+//            NSString *visualFormat = @"V:|-[valueLabel(==32)]";
+//            NSArray *contraint = [NSLayoutConstraint constraintsWithVisualFormat:visualFormat
+//                                                                         options:0
+//                                                                         metrics:nil
+//                                                                           views:views];
+//            [self addConstraints:contraint];
+//        }
       
         CGPoint innerArcStartPoint = [self.backgroundArcLayer pointForArcEdge:ArcEdgeInner andArcSide:ArcSideBegining];
         _startRangeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, innerArcStartPoint.y+4, innerArcStartPoint.x, 14)];
