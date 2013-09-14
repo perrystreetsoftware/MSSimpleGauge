@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MSNeedleView : UIView
-@property (nonatomic) UIColor *needleColor;
+@property (nonatomic, strong) UIColor *needleColor;
 @end

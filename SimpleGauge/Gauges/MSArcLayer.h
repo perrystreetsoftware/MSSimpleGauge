@@ -23,7 +23,7 @@ typedef enum {
 @property (nonatomic,assign) CGFloat endAngle;
 @property (nonatomic,assign) CGFloat strokeWidth;
 @property (nonatomic,assign) CGFloat arcThickness;
-@property (nonatomic) UIColor *fillColor;
-@property (nonatomic) UIColor *strokeColor;
+@property (nonatomic, strong) UIColor *fillColor;
+@property (nonatomic, strong) UIColor *strokeColor;
 - (CGPoint)pointForArcEdge:(ArcEdge)edge andArcSide:(ArcSide)side;
 @end

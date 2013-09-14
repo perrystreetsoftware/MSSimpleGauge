@@ -9,9 +9,9 @@
 #import "MSSimpleGaugeSubclass.h"
 
 @interface MSAnnotatedGauge : MSSimpleGauge
-@property (nonatomic) NSNumberFormatter *valueFormatter;
-@property (nonatomic) UILabel *titleLabel;
-@property (nonatomic) UILabel *valueLabel;
-@property (nonatomic) UILabel *startRangeLabel;
-@property (nonatomic) UILabel *endRangeLabel;
+@property (nonatomic, strong) NSNumberFormatter *valueFormatter;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *valueLabel;
+@property (nonatomic, strong) UILabel *startRangeLabel;
+@property (nonatomic, strong) UILabel *endRangeLabel;
 @end

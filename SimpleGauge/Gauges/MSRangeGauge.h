@@ -11,7 +11,7 @@
 @interface MSRangeGauge : MSSimpleGauge
 @property (nonatomic,assign) float lowerRangeValue;
 @property (nonatomic,assign) float upperRangeValue;
-@property (nonatomic) UIColor *rangeFillColor;
+@property (nonatomic, strong) UIColor *rangeFillColor;
 - (void)setLowerRangeValue:(float)lowerRangeValue animated:(BOOL)animated;
 - (void)setUpperRangeValue:(float)upperRangeValue animated:(BOOL)animated;
 @end

@@ -10,17 +10,17 @@
 #import "MSNeedleView.h"
 
 @interface MSSimpleGauge : UIView
-@property (nonatomic) MSNeedleView *needleView;
+@property (nonatomic, strong) MSNeedleView *needleView;
 @property (nonatomic,assign) float maxValue;
 @property (nonatomic,assign) float minValue;
 @property (nonatomic,assign) float value;
 @property (nonatomic,assign) float startAngle;
 @property (nonatomic,assign) float endAngle;
 @property (nonatomic,assign) float arcThickness;
-@property (nonatomic) UIColor *backgroundArcFillColor;
-@property (nonatomic) UIColor *backgroundArcStrokeColor;
-@property (nonatomic) UIColor *fillArcFillColor;
-@property (nonatomic) UIColor *fillArcStrokeColor;
+@property (nonatomic, strong) UIColor *backgroundArcFillColor;
+@property (nonatomic, strong) UIColor *backgroundArcStrokeColor;
+@property (nonatomic, strong) UIColor *fillArcFillColor;
+@property (nonatomic, strong) UIColor *fillArcStrokeColor;
 @property (nonatomic) CGGradientRef fillGradient;
 @property (nonatomic) CGGradientRef backgroundGradient;
 - (void)setValue:(float)value animated:(BOOL)animated;
