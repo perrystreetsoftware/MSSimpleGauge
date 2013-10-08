@@ -10,6 +10,5 @@
 #import "MSArcLayerSubclass.h"
 
 @interface MSGradientArcLayer : MSArcLayer
-+ (CGGradientRef)defaultGradient;
 @property (nonatomic,assign) CGGradientRef gradient;
 @end

@@ -50,6 +50,7 @@
     
     CGContextAddPath(context, path);
     CGContextFillPath(context);
+    CGPathRelease(path);
 }
 
 - (void)setNeedleColor:(UIColor *)needleColor
