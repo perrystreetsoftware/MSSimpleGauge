@@ -49,15 +49,24 @@
         }
         [self addSubview:_valueLabel];
        
-//        if ([NSLayoutConstraint class]) {
-//            NSDictionary *views = NSDictionaryOfVariableBindings(titleLabel, valueLabel);
-//            NSString *visualFormat = @"V:|-[valueLabel(==32)]";
-//            NSArray *contraint = [NSLayoutConstraint constraintsWithVisualFormat:visualFormat
-//                                                                         options:0
-//                                                                         metrics:nil
-//                                                                           views:views];
-//            [self addConstraints:contraint];
-//        }
+        
+        [self addConstraint:
+         [NSLayoutConstraint constraintWithItem:_valueLabel
+                                      attribute:NSLayoutAttributeCenterX
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:self
+                                      attribute:NSLayoutAttributeCenterX
+                                     multiplier:1.0f
+                                       constant:0.0f]
+         ];
+        
+        NSDictionary *views = NSDictionaryOfVariableBindings(titleLabel, valueLabel);
+        NSString *visualFormat = @"V:|-[valueLabel(==32)]";
+        NSArray *contraint = [NSLayoutConstraint constraintsWithVisualFormat:visualFormat
+                                                                     options:0
+                                                                     metrics:nil
+                                                                       views:views];
+        [self addConstraints:contraint];
       
         CGPoint innerArcStartPoint = [self.backgroundArcLayer pointForArcEdge:ArcEdgeInner andArcSide:ArcSideBegining];
         _startRangeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, innerArcStartPoint.y+4, innerArcStartPoint.x, 14)];
